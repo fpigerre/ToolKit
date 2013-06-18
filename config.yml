@@ -1,0 +1,13 @@
+#########################################################
+# This is the configuration file for the ToolKit plugin #
+# Plugin made by PixelCrumbs and psgs                   #
+#########################################################
+
+mysql:
+  host: localhost
+  port: '3306'
+  database: bans
+  username: root
+  password: password
+  table_name: SMP_banned
+server_name: SMP
