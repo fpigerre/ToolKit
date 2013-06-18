@@ -9,4 +9,4 @@ To install dependencies, make sure you have Apache Maven installed (http://maven
 
 and use the following command:
 
-mvn clean install
+```mvn clean install```
