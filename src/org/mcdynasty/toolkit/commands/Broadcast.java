@@ -16,7 +16,7 @@ public class Broadcast {
     	    usage = "/broadcast <message>",
     	    desc = "Broadcasts a command to the entire server.")
         @CommandPermissions({"toolkit.broadcast"})
-        public void kick(final CommandContext args, CommandSender sender) throws CommandException {
+        public void broadcast(final CommandContext args, CommandSender sender) throws CommandException {
     	if (args.argsLength() == 0) {
     	    sender.sendMessage(AQUA + "Please specify a message to broadcast!");
     	    sender.sendMessage(AQUA + "Correct usage: /broadcast <message>");
