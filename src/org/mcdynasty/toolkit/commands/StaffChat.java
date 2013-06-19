@@ -4,9 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.Server;
-
-import org.mcdynasty.toolkit.ToolKit;
 
 import com.sk89q.minecraft.util.commands.Command;
 import com.sk89q.minecraft.util.commands.CommandContext;
@@ -15,14 +12,8 @@ import com.sk89q.minecraft.util.commands.CommandPermissions;
 
 public class StaffChat {
 	
-
-
-    ChatColor GOLD = ChatColor.GOLD;
     ChatColor AQUA = ChatColor.AQUA;
     ChatColor RED = ChatColor.RED;
-    ChatColor BLUE = ChatColor.BLUE;
-    ChatColor GREEN = ChatColor.GREEN;
-    ChatColor DAQUA = ChatColor.DARK_AQUA;
     
     @Command(aliases = {"staffchat", "sc", "chat"}, 
     	    usage = "/staffchat <message>",
@@ -34,15 +25,18 @@ public class StaffChat {
     	    sender.sendMessage(AQUA + "Correct usage: /staffchat <message>");
     	    
     	} else {
+    		
     		final String scmessage = (RED + "[StaffChat]: " + ChatColor.RESET + sender.getName() + " " + args);
-    		for (Player player : server.getOnlinePlayers());
+    	    for (final Player p : Bukkit.getOnlinePlayers()) {
     		{
-    			if (player.hasPermission("toolkit.staffchat.receive"));
+    			if (p.hasPermission("toolkit.staffchat.receive")) {
     			{
     				continue;
     			}
-    			player.sendMessage(scmessage);
+    			p.sendMessage(scmessage);
+    			}
     		}
+    	    }
     	}
     }
 }
