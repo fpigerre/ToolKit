@@ -55,8 +55,8 @@
         <url>http://repo.bukkit.org/content/groups/public</url>
         </repository>
 		<repository>
-        <id>command-framework-parent</id>
-        <url>http://maven.sk89q.com/repo</url>
+        <id>command-framework-bukkit</id>
+        <url>https://github.com/ProjectAres/sk89q-command-framework.git</url>
         </repository>
 	</repositories>
 
@@ -68,8 +68,8 @@
 		</dependency>
 				<dependency>
 			<groupId>com.sk89q</groupId>
-			<artifactId>command-framework-parent</artifactId>
-			<version>4.0.0</version>
+			<artifactId>command-framework-bukkit</artifactId>
+			<version>0.4-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
