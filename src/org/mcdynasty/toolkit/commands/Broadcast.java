@@ -4,28 +4,25 @@ import org.bukkit.command.*;
 import org.bukkit.ChatColor;
 import org.bukkit.Bukkit;
 
-import org.mcdynasty.toolkit.ToolKit;
+import com.sk89q.minecraft.util.commands.*;
+import com.sk89q.minecraft.util.commands.Command;
+import com.sk89q.minecraft.util.commands.CommandException;
 
-public class Broadcast implements CommandExecutor {
+public class Broadcast {
+	
+    ChatColor AQUA = ChatColor.AQUA;
 
-	@SuppressWarnings("unused")
-	private ToolKit plugin;
-	 
-	public Broadcast(ToolKit plugin) {
-		this.plugin = plugin;
-	}
- 
-	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (cmd.getName().equalsIgnoreCase("broadcast")) {
-		if (sender.hasPermission("toolkit.broadcast")) {
-			if (args.length < 0) {
-		           sender.sendMessage("Not enough arguments!");
-			} else {
-				Bukkit.broadcastMessage("["+ ChatColor.GOLD + "BROADCAST" + ChatColor.WHITE + "] " + args[0]);
-			}
-		}
-		}
-		return false;
-	}
+    @Command(aliases = {"broadcast"}, 
+    	    usage = "/broadcast <message>",
+    	    desc = "Broadcasts a command to the entire server.")
+        @CommandPermissions({"toolkit.broadcast"})
+        public void kick(final CommandContext args, CommandSender sender) throws CommandException {
+    	if (args.argsLength() == 0) {
+    	    sender.sendMessage(AQUA + "Please specify a message to broadcast!");
+    	    sender.sendMessage(AQUA + "Correct usage: /broadcast <message>");
+    	    
+    	} else {
+			Bukkit.broadcastMessage("["+ ChatColor.GOLD + "BROADCAST" + ChatColor.WHITE + "] " + args);
+    	}
+    }
 }
