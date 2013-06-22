@@ -113,8 +113,8 @@ public class ToolKit extends JavaPlugin {
 		final CommandsManagerRegistration cmdRegister = new CommandsManagerRegistration(
 				this, commands);
 
-		cmdRegister.register(CommandHandler.class);
 		cmdRegister.register(Broadcast.class);
+		cmdRegister.register(CommandHandler.class);
 		cmdRegister.register(StaffChat.class);
 	}
 

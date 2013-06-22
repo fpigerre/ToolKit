@@ -24,9 +24,9 @@ public class Message {
 
 		} else {
 			final String senderName = sender.getName();
-			final String targetName = args[1];
-			final String frommessage = GOLD + "[From " + senderName + "]" + RESET + args[2];
-			final String tomessage = GOLD + "[To " + targetName + "]" + RESET + args[2];
+			final String targetName = args.getString(0);;
+			final String frommessage = GOLD + "[From " + senderName + "]" + RESET + args.getString(1);;
+			final String tomessage = GOLD + "[To " + targetName + "]" + RESET + args.getString(1);;
 
 			for (final Player p : Bukkit.getOnlinePlayers()) {
 				{
