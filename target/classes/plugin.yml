@@ -15,3 +15,4 @@ commands:
       description: Broadcasts a message to all online staff.
       permission: toolkit.staffchat
       permission-message: You don't have toolkit.staffchat
+      aliases: [sc, chat]
