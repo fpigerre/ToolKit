@@ -9,20 +9,20 @@ import com.sk89q.minecraft.util.commands.Command;
 import com.sk89q.minecraft.util.commands.CommandException;
 
 public class Broadcast {
-	
-    ChatColor AQUA = ChatColor.AQUA;
 
-    @Command(aliases = {"broadcast"}, 
-    	    usage = "/broadcast <message>",
-    	    desc = "Broadcasts a command to the entire server.")
-        @CommandPermissions({"toolkit.broadcast"})
-        public void broadcast(final CommandContext args, CommandSender sender) throws CommandException {
-    	if (args.argsLength() == 0) {
-    	    sender.sendMessage(AQUA + "Please specify a message to broadcast!");
-    	    sender.sendMessage(AQUA + "Correct usage: /broadcast <message>");
-    	    
-    	} else {
-			Bukkit.broadcastMessage("["+ ChatColor.GOLD + "BROADCAST" + ChatColor.WHITE + "] " + args);
-    	}
-    }
+	ChatColor AQUA = ChatColor.AQUA;
+
+	@Command(aliases = { "broadcast" }, usage = "/broadcast <message>", desc = "Broadcasts a command to the entire server.")
+	@CommandPermissions({ "toolkit.broadcast" })
+	public void broadcast(final CommandContext args, CommandSender sender)
+			throws CommandException {
+		if (args.argsLength() == 0) {
+			sender.sendMessage(AQUA + "Please specify a message to broadcast!");
+			sender.sendMessage(AQUA + "Correct usage: /broadcast <message>");
+
+		} else {
+			Bukkit.broadcastMessage("[" + ChatColor.GOLD + "BROADCAST"
+					+ ChatColor.WHITE + "] " + args);
+		}
+	}
 }
