@@ -1,8 +1,17 @@
 name: ToolKit
 main: org.mcdynasty.toolkit.ToolKit
-version: 0.1
+version: 0.1 Vanilla
 load: STARTUP
 loadbefore: [Essentials]
 author: psgs, PixelCrumbs
 description: ToolKit is a lightweight plugin designed to execute simple commands.
-depend: [WorldEdit]
+
+commands:
+   broadcast:
+      description: Broadcasts a message to the entire server.
+      permission: toolkit.broadcast
+      permission-message: You don't have toolkit.broadcast
+   staffchat:
+      description: Broadcasts a message to all online staff.
+      permission: toolkit.staffchat
+      permission-message: You don't have toolkit.staffchat
