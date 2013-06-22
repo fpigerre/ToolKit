@@ -25,7 +25,7 @@ public class Weather {
 		if (args.argsLength() == 0) {
 			sender.sendMessage(AQUA + "Please specify a weather type!");
 			sender.sendMessage(AQUA + "Correct usage: /weather <clear,storm>");
-
+/*
 		} else {
 
 			final boolean isStorm = args[0].equalsIgnoreCase("storm");
@@ -33,14 +33,16 @@ public class Weather {
 			final World world = user.getPlayer().getWorld();
 			// TODO Find user/player fix/util
 
-			if (args == "storm") {
+			if (args[0].equalsIgnoreCase("storm")) {
 				world.setStorm(isStorm);
 				sender.sendMessage(GREEN + "You set the weather to storm!");
 			}
-			if (args == "clear") {
+			if (args[0].equalsIgnoreCase("clear")) {
 				world.setClear(isClear);
 				sender.sendMessage(GREEN + "You set the weather to clear!");
 			}
+		}
+	}*/
 		}
 	}
 }

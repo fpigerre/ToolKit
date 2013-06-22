@@ -58,6 +58,10 @@
         <id>command-framework-bukkit</id>
         <url>https://github.com/ProjectAres/sk89q-command-framework.git</url>
         </repository>
+	    <repository>
+        <id>AFK</id>
+        <url>https://github.com/psgs/AFK/blob/master/target/AFK.jar?raw=true</url>
+        </repository>
 	</repositories>
 
 	<dependencies>
@@ -70,6 +74,11 @@
 			<groupId>com.sk89q</groupId>
 			<artifactId>command-framework-bukkit</artifactId>
 			<version>0.4-SNAPSHOT</version>
+		</dependency>
+						<dependency>
+			<groupId>AFK</groupId>
+			<artifactId>AFK</artifactId>
+			<version>3.4.1</version>
 		</dependency>
 	</dependencies>
 </project>
