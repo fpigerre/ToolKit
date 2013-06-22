@@ -17,7 +17,7 @@ public class Message {
 	
 	/*@Command(aliases = { "msg" }, usage = "/msg <player> <message>", desc = "Sends a message to another player.")
 	@CommandPermissions({ "toolkit.msg" })
-	public void broadcast(final CommandContext args, CommandSender sender)
+	public void message(final CommandContext args, CommandSender sender)
 			throws CommandException {
 		if (args.argsLength() < 2) {
 			sender.sendMessage(AQUA + "Correct usage: /msg <player> <message>");

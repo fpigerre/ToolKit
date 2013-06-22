@@ -178,7 +178,7 @@ public class CommandHandler {
 	}
 
 	@Command(aliases = { "rap" }, usage = "/rap <UserName>", desc = "View previous punishments of a player.")
-	@CommandPermissions({ "oresomeadmin.rap" })
+	@CommandPermissions({ "toolkit.rap" })
 	public void rap(CommandContext args, CommandSender sender)
 			throws CommandException, SQLException {
 
@@ -228,7 +228,7 @@ public class CommandHandler {
 	}
 
 	@Command(aliases = { "warn" }, usage = "/warn <Username> <Warning>", desc = "Warns a user on the server.")
-	@CommandPermissions({ "oresomeadmin.warn" })
+	@CommandPermissions({ "toolkit.warn" })
 	public void warn(CommandContext args, CommandSender sender)
 			throws CommandException {
 

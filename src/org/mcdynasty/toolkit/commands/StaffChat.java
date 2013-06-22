@@ -17,7 +17,7 @@ public class StaffChat {
 
 	@Command(aliases = { "staffchat", "sc", "chat" }, usage = "/staffchat <message>", desc = "Broadcasts a message to all online staff.")
 	@CommandPermissions({ "toolkit.staffchat" })
-	public void kick(final CommandContext args, CommandSender sender)
+	public void staffchat(final CommandContext args, CommandSender sender)
 			throws CommandException {
 		if (args.argsLength() == 0) {
 			sender.sendMessage(AQUA + "Please specify a message to broadcast!");

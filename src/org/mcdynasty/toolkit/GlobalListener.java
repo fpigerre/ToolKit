@@ -56,7 +56,7 @@ public class GlobalListener implements Listener {
 	@EventHandler
 	public void onJoin(PlayerLoginEvent event) {
 
-		MySQL mysql = new MySQL(plugin.getLogger(), "[OresomeBattles]",
+		MySQL mysql = new MySQL(plugin.getLogger(), "[ToolKit]",
 				plugin.mysql_host, plugin.mysql_port, plugin.mysql_db,
 				plugin.mysql_user, plugin.mysql_password);
 

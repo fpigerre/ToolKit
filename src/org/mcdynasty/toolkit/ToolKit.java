@@ -12,7 +12,6 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import org.mcdynasty.toolkit.commands.*;
-import org.mcdynasty.toolkit.commands.CommandHandler;
 import org.mcdynasty.toolkit.database.*;
 import com.sk89q.bukkit.util.CommandsManagerRegistration;
 import com.sk89q.minecraft.util.commands.*;
@@ -26,8 +25,6 @@ import com.sk89q.minecraft.util.commands.*;
  */
 
 public class ToolKit extends JavaPlugin {
-
-
 
 	private CommandsManager<CommandSender> commands;
 	private boolean opPermissions;
@@ -46,7 +43,7 @@ public class ToolKit extends JavaPlugin {
 	public void onDisable() {
 
 		PluginDescriptionFile pdfFile = getDescription();
-		this.logger.info(pdfFile.getName() + "is now disabled");
+		this.logger.info(pdfFile.getName() + " is now disabled");
 	}
 
 	public void onEnable() {
@@ -56,7 +53,7 @@ public class ToolKit extends JavaPlugin {
 		setupDatabase();
 		PluginDescriptionFile pdfFile = getDescription();
 		this.logger.info(pdfFile.getName() + " version " + pdfFile.getVersion()
-				+ "is now enabled");
+				+ " is now enabled");
 		getServer().getPluginManager().registerEvents(new GlobalListener(this),
 				this);
 

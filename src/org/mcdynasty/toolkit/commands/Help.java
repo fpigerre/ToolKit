@@ -14,7 +14,7 @@ public class Help {
 
 	@Command(aliases = { "help" }, usage = "/help <plugin>", desc = "Displays Help.")
 	@CommandPermissions({ "toolkit.help" })
-	public void broadcast(final CommandContext args, CommandSender sender)
+	public void help(final CommandContext args, CommandSender sender)
 			throws CommandException {
 		
 			Bukkit.broadcastMessage("[" + ChatColor.GOLD + "BROADCAST"
