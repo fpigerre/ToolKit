@@ -6,11 +6,3 @@ loadbefore: [Essentials]
 author: psgs, PixelCrumbs
 description: ToolKit is a lightweight plugin designed to execute simple commands.
 depend: [WorldEdit]
-# Ban commands are not defined here. OresomeAdmin uses sk89q's command framework!
-
-commands:
-    broadcast:
-      description: Broadcasts a message to the entire server.
-      permission: toolkit.broadcast
-      permission-message: You don't have toolkit.broadcast
-      aliases: [bcast,bc]

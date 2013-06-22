@@ -54,10 +54,6 @@
         <id>bukkit-repo</id>
         <url>http://repo.bukkit.org/content/groups/public</url>
         </repository>
-		<repository>
-        <id>command-framework-bukkit</id>
-        <url>https://github.com/ProjectAres/sk89q-command-framework.git</url>
-        </repository>
 	    <repository>
         <id>AFK</id>
         <url>https://github.com/psgs/AFK/blob/master/target/AFK.jar?raw=true</url>
@@ -72,7 +68,7 @@
 		</dependency>
 				<dependency>
 			<groupId>com.sk89q</groupId>
-			<artifactId>command-framework-bukkit</artifactId>
+			<artifactId>worldedit</artifactId>
 			<version>0.4-SNAPSHOT</version>
 		</dependency>
 						<dependency>
