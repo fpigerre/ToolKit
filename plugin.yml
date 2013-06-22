@@ -6,3 +6,5 @@ loadbefore: [Essentials]
 author: psgs, PixelCrumbs
 description: ToolKit is a lightweight plugin designed to execute simple commands.
 depend: [WorldEdit]
+
+#Commands aren't defined here as sk89q's command framework is being used.
