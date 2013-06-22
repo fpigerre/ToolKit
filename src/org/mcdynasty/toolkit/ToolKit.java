@@ -3,7 +3,6 @@ package org.mcdynasty.toolkit;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
-import org.bukkit.Server;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -27,12 +26,7 @@ import com.sk89q.minecraft.util.commands.*;
 
 public class ToolKit extends JavaPlugin {
 
-	@SuppressWarnings("unused")
-	private final Server server;
 
-	public ToolKit(final Server server) {
-		this.server = server;
-	}
 
 	private CommandsManager<CommandSender> commands;
 	private boolean opPermissions;
@@ -66,7 +60,6 @@ public class ToolKit extends JavaPlugin {
 				this);
 
 		server_name = getConfig().getString("server_name");
-
 	}
 
 	private void setupDatabase() {
