@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import org.mcdynasty.toolkit.commands.*;
 import org.mcdynasty.toolkit.commands.CommandHandler;
 import org.mcdynasty.toolkit.database.*;
 import com.sk89q.bukkit.util.CommandsManagerRegistration;
@@ -71,7 +72,7 @@ public class ToolKit extends JavaPlugin {
 		mysql_port = getConfig().getString("mysql.port");
 		table_name = getConfig().getString("mysql.table_name");
 
-		mysql = new MySQL(getLogger(), "[OresomeAdmin]", mysql_host,
+		mysql = new MySQL(getLogger(), "[ToolKit]", mysql_host,
 				mysql_port, mysql_db, mysql_user, mysql_password);
 
 		getLogger().info("Connecting to MySQL Database...");
@@ -116,6 +117,8 @@ public class ToolKit extends JavaPlugin {
 				this, commands);
 
 		cmdRegister.register(CommandHandler.class);
+		cmdRegister.register(Broadcast.class);
+		cmdRegister.register(StaffChat.class);
 	}
 
 	@Override
